@@ -6,10 +6,11 @@
  * @flow
  */
 
-import React, { Component } from 'react';
+import React from 'react';
 import { Platform, StyleSheet, Text, View } from 'react-native';
 
-import firebase from '@react-native-firebase/app';
+import auth from '@react-native-firebase/auth';
+import { firebase } from '@react-native-firebase/auth';
 
 // TODO(you): import any additional firebase services that you require for your app, e.g for auth:
 //    1) install the npm package: `yarn add @react-native-firebase/auth@alpha` - you do not need to
