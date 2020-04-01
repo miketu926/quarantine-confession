@@ -7,7 +7,7 @@
  */
 
 import React from 'react';
-import { Platform, StyleSheet, Text, View } from 'react-native';
+import { Platform, StyleSheet, Text, View, ActivityIndicator } from 'react-native';
 
 import auth from '@react-native-firebase/auth';
 import { firebase } from '@react-native-firebase/auth';
@@ -33,14 +33,16 @@ const firebaseCredentials = Platform.select({
 const App = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.welcome}>Welcome to React Native + Firebase!</Text>
+      <Text style={styles.instructions}>QUARANTINE CONFESSION</Text>
+      <ActivityIndicator size='large' color='#0000ff' />
+      {/* <Text style={styles.welcome}>Welcome to React Native + Firebase!</Text>
       <Text style={styles.instructions}>To get started, edit App.js</Text>
       <Text style={styles.instructions}>{instructions}</Text>
       {!firebase.apps.length && (
         <Text style={styles.instructions}>
           {`\nYou currently have no Firebase apps registered, this most likely means you've not downloaded your project credentials. Visit the link below to learn more. \n\n ${firebaseCredentials}`}
         </Text>
-      )}
+      )} */}
     </View>
   );
 };
@@ -62,6 +64,6 @@ const styles = StyleSheet.create({
   instructions: {
     textAlign: 'center',
     color: '#333333',
-    marginBottom: 5,
+    marginBottom: 20,
   },
 });
