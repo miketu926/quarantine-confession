@@ -7,10 +7,11 @@
  */
 
 import React from 'react';
-import { Platform, StyleSheet, Text, View, ActivityIndicator } from 'react-native';
+import { Platform, StyleSheet, Text, View, ScrollView } from 'react-native';
 
-import auth from '@react-native-firebase/auth';
-import { firebase } from '@react-native-firebase/auth';
+import auth, { firebase } from '@react-native-firebase/auth';
+
+import Homepage from './app/pages/Homepage';
 
 // TODO(you): import any additional firebase services that you require for your app, e.g for auth:
 //    1) install the npm package: `yarn add @react-native-firebase/auth@alpha` - you do not need to
@@ -33,18 +34,10 @@ const firebaseCredentials = Platform.select({
 const App = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.instructions}>QUARANTINE CONFESSION</Text>
-      <ActivityIndicator size='large' color='#0000ff' />
-      {/* <Text style={styles.welcome}>Welcome to React Native + Firebase!</Text>
-      <Text style={styles.instructions}>To get started, edit App.js</Text>
-      <Text style={styles.instructions}>{instructions}</Text>
-      {!firebase.apps.length && (
-        <Text style={styles.instructions}>
-          {`\nYou currently have no Firebase apps registered, this most likely means you've not downloaded your project credentials. Visit the link below to learn more. \n\n ${firebaseCredentials}`}
-        </Text>
-      )} */}
+      <Homepage />
     </View>
   );
+  // }
 };
 
 export default App;

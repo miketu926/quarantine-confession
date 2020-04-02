@@ -10,12 +10,14 @@ const Homepage = () => {
 
     return (
         <View style={styles.container}>
-            <Text>{message}</Text>
+            <Text style={styles.message}>{message}</Text>
             <ActivityIndicator size='large' color='#000000' />
         </View >
     )
 
 };
+
+export default Homepage;
 
 const styles = StyleSheet.create({
     container: {
@@ -24,7 +26,6 @@ const styles = StyleSheet.create({
     },
     message: {
         textAlign: 'center',
+        marginBottom: 10,
     }
 })
-
-export default Homepage;
