@@ -11,7 +11,7 @@ const Homepage = () => {
     return (
         <View style={styles.container}>
             <Text style={styles.message}>{message}</Text>
-            <ActivityIndicator size='large' color='#000000' />
+            <ActivityIndicator size='large' color='white' />
         </View >
     )
 
@@ -23,9 +23,12 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: 'center',
+        backgroundColor: '#4F6D7A',
+        width: '100%',
     },
     message: {
         textAlign: 'center',
         marginBottom: 10,
+        color: 'white',
     }
 })

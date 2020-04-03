@@ -1,13 +1,25 @@
-import React from 'react';
-import { Platform, StyleSheet, Text, View, ScrollView } from 'react-native';
+import React, { useEffect } from 'react';
+import { Platform, StyleSheet, Text, View, ScrollView, StatusBar } from 'react-native';
 import auth, { firebase } from '@react-native-firebase/auth';
+import SplashScreen from 'react-native-splash-screen';
+
 import Homepage from './app/pages/Homepage';
 
 // 4) The Firebase Auth service is now available to use here: `firebase.auth().currentUser`
 
 const App = () => {
+  useEffect(() => {
+    // start: using react-native-splash-screen to show splashscreen
+    // then when app is ready hides splashscreen
+    SplashScreen.hide();
+
+  }, [])
   return (
     <View style={styles.container}>
+      <StatusBar
+        barStyle="light-content"
+        backgroundColor="#4f6d7a"
+      />
       <Homepage />
     </View>
   );
