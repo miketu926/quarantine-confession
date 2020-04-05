@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import {
+    StyleSheet, View, Text, TextInput,
+    KeyboardAvoidingView
+} from 'react-native';
 
 const Footer = () => {
     // const [message, setMessage] = useState('');
@@ -9,9 +12,25 @@ const Footer = () => {
     // }, [message]);
 
     return (
-        <View style={styles.container}>
-            <Text style={styles.message}>Add a comment</Text>
-        </View >
+        <KeyboardAvoidingView
+            style={styles.keyboardAvoidingContainer}
+            behavior='padding'
+        >
+            <View style={styles.outerWrapper}>
+                <View style={styles.messageWrapper}>
+                    <TextInput
+                        style={styles.messageInput}
+                        placeholder='Add a comment...'
+                        placeholderTextColor='lightgray'
+                        onChangeText={() => { return }}
+                        enablesReturnKeyAutomatically={true}
+                        keyboardAppearance={'dark'}
+                        maxLength={500}
+                        multiline={true}
+                    />
+                </View >
+            </View>
+        </KeyboardAvoidingView>
     )
 
 };
@@ -19,16 +38,31 @@ const Footer = () => {
 export default Footer;
 
 const styles = StyleSheet.create({
-    container: {
+    keyboardAvoidingContainer: {
+        backgroundColor: 'black',
+        width: '100%',
+    },
+    outerWrapper: {
+        alignItems: 'center',
+        borderTopWidth: 1,
+        borderColor: 'gray',
+    },
+    messageWrapper: {
         flexDirection: 'row',
         justifyContent: 'center',
         backgroundColor: 'gray',
-        width: '100%',
-        height: 60,
+        margin: 15,
+        marginBottom: 20,
+        borderRadius: 2,
+        borderWidth: 1,
+        borderColor: 'gray',
+        width: '90%',
+
     },
-    message: {
-        textAlign: 'center',
+    messageInput: {
         color: 'white',
-        fontSize: 20,
-    },
+        width: '95%',
+        height: '100%',
+        paddingBottom: 5,
+    }
 })

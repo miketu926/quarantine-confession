@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { StyleSheet, View, Text, ActivityIndicator } from "react-native";
+import {
+    StyleSheet, View, Text,
+    ScrollView, ActivityIndicator, KeyboardAvoidingView
+} from "react-native";
+// import MessageItem
 
 const Homepage = () => {
     const [message, setMessage] = useState('');
@@ -9,10 +13,66 @@ const Homepage = () => {
     }, [message]);
 
     return (
-        <View style={styles.container}>
-            <Text style={styles.message}>{message}</Text>
-            <ActivityIndicator size='large' color='white' />
-        </View >
+        <ScrollView style={{ flex: 1, backgroundColor: 'black', width: '100%' }}>
+            <View style={styles.container}>
+                <Text style={styles.message}>{message}</Text>
+                <ActivityIndicator size='large' color='white' />
+            </View >
+            <View style={styles.container}>
+                <Text style={styles.message}>{message}</Text>
+            </View >
+            <View style={styles.container}>
+                <Text style={styles.message}>{message}</Text>
+            </View >
+            <View style={styles.container}>
+                <Text style={styles.message}>{message}</Text>
+            </View >
+            <View style={styles.container}>
+                <Text style={styles.message}>{message}</Text>
+            </View >
+            <View style={styles.container}>
+                <Text style={styles.message}>{message}</Text>
+            </View >
+            <View style={styles.container}>
+                <Text style={styles.message}>{message}</Text>
+            </View >
+            <View style={styles.container}>
+                <Text style={styles.message}>{message}</Text>
+            </View >
+            <View style={styles.container}>
+                <Text style={styles.message}>{message}</Text>
+            </View >
+            <View style={styles.container}>
+                <Text style={styles.message}>{message}</Text>
+            </View >
+            <View style={styles.container}>
+                <Text style={styles.message}>{message}</Text>
+            </View >
+            <View style={styles.container}>
+                <Text style={styles.message}>{message}</Text>
+            </View >
+            <View style={styles.container}>
+                <Text style={styles.message}>{message}</Text>
+            </View >
+            <View style={styles.container}>
+                <Text style={styles.message}>{message}</Text>
+            </View >
+            <View style={styles.container}>
+                <Text style={styles.message}>{message}</Text>
+            </View >
+            <View style={styles.container}>
+                <Text style={styles.message}>{message}</Text>
+            </View >
+            <View style={styles.container}>
+                <Text style={styles.message}>{message}</Text>
+            </View >
+            <View style={styles.container}>
+                <Text style={styles.message}>{message}</Text>
+            </View >
+            <View style={styles.container}>
+                <Text style={styles.message}>{message}</Text>
+            </View >
+        </ScrollView>
     )
 
 };
@@ -23,8 +83,13 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: 'center',
-        backgroundColor: '#4F6D7A',
-        width: '100%',
+        alignSelf: 'center',
+        backgroundColor: 'gray',
+        paddingTop: 5,
+        paddingBottom: 5,
+        borderRadius: 5,
+        marginBottom: 3,
+        width: '95%',
     },
     message: {
         textAlign: 'center',

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Text, Image } from 'react-native';
+const LOGO_IMAGE_PATH = '../../../ios/QuarantineConfession/Images.xcassets/SplashIcon.imageset/QClogo.png';
 
 const Header = () => {
     // const [message, setMessage] = useState('');
@@ -10,9 +11,15 @@ const Header = () => {
 
     return (
         <View style={styles.container}>
-            <Text style={styles.message}>QC</Text>
+            <Image
+                style={styles.topLeftLogo}
+                source={require(LOGO_IMAGE_PATH)}
+            />
             <Text style={styles.message}>Messages</Text>
-            <Text style={styles.message}>QC</Text>
+            <Image
+                style={styles.topLeftLogo}
+                source={require(LOGO_IMAGE_PATH)}
+            />
         </View >
     )
 
@@ -25,15 +32,16 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        backgroundColor: 'gray',
+        backgroundColor: 'black',
         width: '100%',
-        height: 100,
+        height: 110,
         paddingTop: 40,
         paddingLeft: 20,
         paddingRight: 20,
     },
     topLeftLogo: {
-
+        resizeMode: 'contain',
+        width: 45,
     },
     message: {
         textAlign: 'center',
