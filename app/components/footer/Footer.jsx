@@ -13,7 +13,7 @@ const Footer = () => {
 
     return (
         <KeyboardAvoidingView
-            style={styles.keyboardAvoidingContainer}
+            style={{ backgroundColor: 'black', width: '100%' }}
             behavior='padding'
         >
             <View style={styles.outerWrapper}>
@@ -29,7 +29,7 @@ const Footer = () => {
                         multiline={true}
                     />
                 </View >
-            </View>
+            </View >
         </KeyboardAvoidingView>
     )
 

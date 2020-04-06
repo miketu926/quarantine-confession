@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import {
   Platform, StyleSheet, Text,
   View, ScrollView, StatusBar,
-  SafeAreaView,
+  SafeAreaView, KeyboardAvoidingView
 } from 'react-native';
 import auth, { firebase } from '@react-native-firebase/auth';
 import SplashScreen from 'react-native-splash-screen';
