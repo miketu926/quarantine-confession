@@ -32,10 +32,6 @@ const Footer = () => {
 export default Footer;
 
 const styles = StyleSheet.create({
-    keyboardAvoidingContainer: {
-        backgroundColor: 'black',
-        width: '100%',
-    },
     outerWrapper: {
         alignItems: 'center',
         borderTopWidth: 1,

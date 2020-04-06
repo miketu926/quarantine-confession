@@ -18,7 +18,6 @@ const App = () => {
     // start: using react-native-splash-screen to show splashscreen
     // then when app is ready hides splashscreen
     SplashScreen.hide();
-
   }, [])
 
   return (
@@ -28,10 +27,10 @@ const App = () => {
     >
       <SafeAreaView style={{ flex: 1, backgroundColor: 'black' }}>
         <View style={styles.container}>
-          {/* <StatusBar
-          barStyle="light-content"
-          backgroundColor="black"
-        /> */}
+          <StatusBar
+            barStyle="light-content"
+            backgroundColor="#4f6d7a"
+          />
           <Header />
           <Homepage />
           <Footer />
