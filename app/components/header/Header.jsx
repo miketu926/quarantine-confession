@@ -15,7 +15,7 @@ const Header = () => {
                 style={styles.topLeftLogo}
                 source={require(LOGO_IMAGE_PATH)}
             />
-            <Text style={styles.message}>Messages</Text>
+            <Text style={styles.header}>Messages</Text>
             <Image
                 style={styles.topLeftLogo}
                 source={require(LOGO_IMAGE_PATH)}
@@ -34,19 +34,18 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: 'black',
         width: '100%',
-        height: 110,
-        paddingTop: 40,
-        paddingLeft: 20,
-        paddingRight: 20,
+        height: '8%',
+        paddingLeft: 15,
+        paddingRight: 15,
     },
     topLeftLogo: {
         resizeMode: 'contain',
         width: 45,
     },
-    message: {
+    header: {
         textAlign: 'center',
         color: 'white',
-        fontSize: 25,
+        fontSize: 20,
     },
     topRightSettings: {
 

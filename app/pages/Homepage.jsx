@@ -13,7 +13,7 @@ const Homepage = () => {
     }, [message]);
 
     return (
-        <ScrollView style={{ flex: 1, backgroundColor: 'black', width: '100%' }}>
+        <ScrollView style={{ flex: 1, backgroundColor: 'black', width: '100%', borderWidth: 1, borderColor: 'white' }}>
             <View style={styles.container}>
                 <Text style={styles.message}>{message}</Text>
                 <ActivityIndicator size='large' color='white' />

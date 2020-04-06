@@ -1,5 +1,9 @@
 import React, { useEffect } from 'react';
-import { Platform, StyleSheet, Text, View, ScrollView, StatusBar } from 'react-native';
+import {
+  Platform, StyleSheet, Text,
+  View, ScrollView, StatusBar,
+  SafeAreaView,
+} from 'react-native';
 import auth, { firebase } from '@react-native-firebase/auth';
 import SplashScreen from 'react-native-splash-screen';
 
@@ -18,15 +22,17 @@ const App = () => {
   }, [])
 
   return (
-    <View style={styles.container}>
-      <StatusBar
-        barStyle="light-content"
-        backgroundColor="#4f6d7a"
-      />
-      <Header />
-      <Homepage />
-      <Footer />
-    </View>
+    <SafeAreaView style={{ flex: 1, backgroundColor: 'black' }}>
+      <View style={styles.container}>
+        {/* <StatusBar
+          barStyle="light-content"
+          backgroundColor="black"
+        /> */}
+        <Header />
+        <Homepage />
+        <Footer />
+      </View>
+    </SafeAreaView>
   );
 };
 
@@ -37,5 +43,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    borderWidth: 1,
+    borderColor: 'white',
   },
 });
