@@ -22,23 +22,33 @@ const App = () => {
   }, [])
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: 'black' }}>
-      <View style={styles.container}>
-        {/* <StatusBar
+    <KeyboardAvoidingView
+      style={styles.keyboardAvoidingContainer}
+      behavior='padding'
+    >
+      <SafeAreaView style={{ flex: 1, backgroundColor: 'black' }}>
+        <View style={styles.container}>
+          {/* <StatusBar
           barStyle="light-content"
           backgroundColor="black"
         /> */}
-        <Header />
-        <Homepage />
-        <Footer />
-      </View>
-    </SafeAreaView>
+          <Header />
+          <Homepage />
+          <Footer />
+        </View>
+      </SafeAreaView>
+    </KeyboardAvoidingView>
   );
 };
 
 export default App;
 
 const styles = StyleSheet.create({
+  keyboardAvoidingContainer: {
+    flex: 1,
+    backgroundColor: 'black',
+    width: '100%',
+  },
   container: {
     flex: 1,
     justifyContent: 'center',

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {
-    StyleSheet, View, Text, TextInput,
-    KeyboardAvoidingView
+    StyleSheet, View, Text, TextInput
 } from 'react-native';
 
 const Footer = () => {
@@ -12,25 +11,20 @@ const Footer = () => {
     // }, [message]);
 
     return (
-        <KeyboardAvoidingView
-            style={{ backgroundColor: 'black', width: '100%' }}
-            behavior='padding'
-        >
-            <View style={styles.outerWrapper}>
-                <View style={styles.messageWrapper}>
-                    <TextInput
-                        style={styles.messageInput}
-                        placeholder='Add a comment...'
-                        placeholderTextColor='lightgray'
-                        onChangeText={() => { return }}
-                        enablesReturnKeyAutomatically={true}
-                        keyboardAppearance={'dark'}
-                        maxLength={500}
-                        multiline={true}
-                    />
-                </View >
+        <View style={styles.outerWrapper}>
+            <View style={styles.messageWrapper}>
+                <TextInput
+                    style={styles.messageInput}
+                    placeholder='Add a comment...'
+                    placeholderTextColor='lightgray'
+                    onChangeText={() => { return }}
+                    enablesReturnKeyAutomatically={true}
+                    keyboardAppearance={'dark'}
+                    maxLength={500}
+                    multiline={true}
+                />
             </View >
-        </KeyboardAvoidingView>
+        </View >
     )
 
 };
